@@ -1,0 +1,17 @@
+{
+  "name": "adapt-reveal",
+  "version": "0.0.0",
+  "homepage": "https://github.com/cgkineo/adapt-reveal",
+  "authors": [
+    "Oliver Foster <oliver.foster@kineo.com>"
+  ],
+  "description": "Peel-back to reveal (left to right)",
+  "main": "/js/adapt-reveal.js",
+  "displayName" : "Reveal Component",
+  "component" : "reveal",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-component"
+  ],
+  "license": "GPLv3"
+}
