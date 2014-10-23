@@ -2,11 +2,50 @@
     "_id":"c-05",
     "_parentId":"b-05",
     "_type":"component",
-    "_component":"text",
+    "_component":"peelbackhotspot",
     "_classes":"",
-    "_layout":"left",
-    "title":"Our first look at a component",
-    "displayTitle":"Our first look at a component",
-    "body":"This component you're reading is a text component. All components take this form of a title and body - except a blank component. However it's important to realise that title and body attributes are not needed. <br><br>Take for instance the media component opposite or below on a smaller device - has no body attribute. Instead of the HTML being rendered Adapt simply doesn't render it. The title attribute is simply a break tag to push the media component level with the opposite component.",
-    "instruction":""
-}
+    "_layout":"full",
+    "title":"Peel-back Hotspot Component",
+    "displayTitle":"Peel-back Hotspot Component",
+    "body":"This is the Peel-back Hotspot component, click the button, or peel the image from left to right to expose the layer underneath. Click the hotspots to show the relevant text.",
+    "instruction":"",
+    "_pageLevelProgress": {
+        "_isEnabled": true
+    },
+    "_reveal": {
+        "_background": "assets/male-naked.png",
+        "_foreground": "assets/male-clothed.png",
+        "_button": {
+            "textLeft": "Slide >",
+            "textRight": "< Slide"
+        },
+        "_maxHeight": {
+            "small": "250px",
+            "medium": "250px",
+            "large": "400px"
+        }
+    },
+    "_items": [
+        {
+            "_top": "5",
+            "_left": "45",
+            "pinAlt": "Alt text",
+            "title": "Head",
+            "body": "Some text about your head"
+        },
+        {
+            "_top": "23",
+            "_left": "55",
+            "pinAlt": "Alt text",
+            "title": "Heart",
+            "body": "Some text about your heart"
+        },
+        {
+            "_top": "45",
+            "_left": "16",
+            "pinAlt": "Alt text",
+            "title": "Hand",
+            "body": "Some text about your hand"
+        }
+    ]
+},
