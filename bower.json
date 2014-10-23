@@ -1,14 +1,14 @@
 {
-  "name": "adapt-reveal",
+  "name": "adapt-peelBackHotspot",
   "version": "0.0.0",
-  "homepage": "https://github.com/cgkineo/adapt-reveal",
+  "homepage": "https://github.com/cgkineo/adapt-peelBackHotspot",
   "authors": [
     "Oliver Foster <oliver.foster@kineo.com>"
   ],
-  "description": "Peel-back to reveal (left to right)",
-  "main": "/js/adapt-reveal.js",
-  "displayName" : "Reveal Component",
-  "component" : "reveal",
+  "description": "Peel-back to peelBackHotspot (left to right)",
+  "main": "/js/adapt-peelBackHotspot.js",
+  "displayName" : "peelBackHotspot Component",
+  "component" : "peelBackHotspot",
   "keywords": [
     "adapt-plugin",
     "adapt-component"

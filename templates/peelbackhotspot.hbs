@@ -1,0 +1,24 @@
+<div class="peelbackhotspot-inner component-inner">
+    {{> component this}}
+    <div class="peelbackhotspot-imageboard">
+    	<img class="peelbackhotspot-foreground" src="{{ _reveal._foreground }}">
+        <div id="peelbackhotspot-track">
+            <button class="peelbackhotspot-button">{{ _reveal._button.textLeft }}</button>
+        </div>
+    	<div class="peelbackhotspot-overlaycontainer">
+    		<div class="peelbackhotspot-hider">
+    			<img class="peelbackhotspot-background" src="{{ _reveal._background }}">
+                {{#if _items}}
+                <div class="peelbackhotspot-hotspots">
+                {{#each _items}}
+                    <a href="#" tabindex="-1" class="peelbackhotspot-hotspot {{#if _isVisited}}visited{{/if}}" data-id="{{@index}}" style="top:{{{_top}}}%; left:{{{_left}}}%;" role="button" aria-label="{{pinAlt}}">
+                    <div class="icon icon-pin"></div>
+                    </a>
+                {{/each}}
+                </div>
+                {{/if}}
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
