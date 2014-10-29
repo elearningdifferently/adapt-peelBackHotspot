@@ -8,44 +8,62 @@
     "title":"Peel-back Hotspot Component",
     "displayTitle":"Peel-back Hotspot Component",
     "body":"This is the Peel-back Hotspot component, click the button, or peel the image from left to right to expose the layer underneath. Click the hotspots to show the relevant text.",
+    "mobileTitle": "Accordion Component",
+    "mobileBody": "This is an Accordion component",
     "instruction":"",
     "_pageLevelProgress": {
         "_isEnabled": true
     },
+    "_isAccordianOnMobile": true,
     "_reveal": {
+        "_isInfoBoxAriaOnly": true,
         "_background": "assets/male-naked.png",
         "_foreground": "assets/male-clothed.png",
         "_button": {
             "textLeft": "Slide >",
-            "textRight": "< Slide"
+            "textRight": "< Slide",
+            "_img": "assets/button.png"
         },
         "_maxHeight": {
-            "small": "250px",
-            "medium": "250px",
-            "large": "400px"
+            "small": "400px",
+            "medium": "400px",
+            "large": "600px"
+        },
+        "_infoboxPaddingPixels": {
+            "top":10,
+            "left":10
         }
     },
     "_items": [
         {
             "_top": "5",
             "_left": "45",
-            "pinAlt": "Alt text",
+            "pinAlt": "Head",
             "title": "Head",
-            "body": "Some text about your head"
+            "body": "Some text about your head",
+            "_isInfoBoxShown": true,
+            "_infoType": "infobox",
+            "alt": "Head"
         },
         {
             "_top": "23",
             "_left": "55",
-            "pinAlt": "Alt text",
+            "pinAlt": "Heart",
             "title": "Heart",
-            "body": "Some text about your heart"
+            "body": "Some text about your heart and hopefully it is aligned with the right-hand side?",
+            "_isInfoBoxShown": true,
+            "_infoType": "infobox",
+            "alt": "Heart"
         },
         {
             "_top": "45",
-            "_left": "16",
-            "pinAlt": "Alt text",
+            "_left": "25",
+            "pinAlt": "Hand",
             "title": "Hand",
-            "body": "Some text about your hand"
+            "body": "Some text about your hand and hopefully is is aligned to the left with fine text wrapping and all that jazz!!",
+            "_isInfoBoxShown": true,
+            "_infoType": "infobox",
+            "alt": "Hand"
         }
     ]
 },
