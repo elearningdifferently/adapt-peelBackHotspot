@@ -50,7 +50,7 @@
             "_left": "55",
             "pinAlt": "Heart",
             "title": "Heart",
-            "body": "Some text about your heart and hopefully it is aligned with the right-hand side?",
+            "body": "Some text about your heart",
             "_isInfoBoxShown": true,
             "_infoType": "infobox",
             "alt": "Heart"
@@ -60,7 +60,7 @@
             "_left": "25",
             "pinAlt": "Hand",
             "title": "Hand",
-            "body": "Some text about your hand and hopefully is is aligned to the left with fine text wrapping and all that jazz!!",
+            "body": "Some text about your hand",
             "_isInfoBoxShown": true,
             "_infoType": "infobox",
             "alt": "Hand"
