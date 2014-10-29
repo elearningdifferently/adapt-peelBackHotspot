@@ -77,6 +77,7 @@ define(function(require) {
 
         prepareAccordionModel: function() {
           var model = this.model;
+          if (model.get('_wasPeelBackHotspot')) return model;
           model.set('_wasPeelBackHotspot', true);
           model.set('originalBody', model.get('body'));
           model.set('originalTitle', model.get('displayTitle'));
@@ -103,6 +104,7 @@ define(function(require) {
         preparePeelBackHotspotModel: function() {
             var model = this.model;
             this.isRevealed = false;
+            if (!model.get('_wasPeelBackHotspot')) return;
             model.set('_wasPeelBackHotspot', false);
             if (model.get('mobileBody')) {
                 model.set('body', model.get('originalBody'));
