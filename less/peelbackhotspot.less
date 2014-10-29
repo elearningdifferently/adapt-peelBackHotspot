@@ -1,5 +1,13 @@
 .peelbackhotspot-inner {
 	position: relative;
+	&.aria-only {
+		.peelbackhotspot-infobox {
+			left: -1000px !important;
+		}
+		.peelbackhotspot-hotspot {
+			display:none !important;
+		}
+	}
 }
 .peelbackhotspot-component {
 	.peelbackhotspot-imageboard {
@@ -19,6 +27,17 @@
 				font-size:32px;
 				height:32px;
 				width:32px;
+				color:grey;
+			}
+			&.visited {
+				.icon {
+					color:grey;
+				}
+			}
+			&:hover {
+				.icon {
+					color:grey;
+				}	
 			}
 		}
 		.peelbackhotspot-foreground {
@@ -34,25 +53,59 @@
 		.peelbackhotspot-background {
 			height:100%;
 			max-width: none !important;
+			position: relative;
 		}
 		.peelbackhotspot-hider {
 			overflow:hidden;
 			position: absolute;
 			width:0%;
-			border-right: 1px solid black;
+			background-color: rgba(0,0,0,1);
 		}
 		#peelbackhotspot-track {
 			position: absolute;
-			top: 50%;
+			top: 0%;
 			left: 0px;
 			width: 100%;
-			height:50px;
-			overflow:hidden;
+			height: 100%
 		}
 		.peelbackhotspot-button {
 			z-index: 1;
 			position:absolute;
 			display:inline-block;
+			line-height: 0;
+			height:100%;
+			width:50px;
+			top:0px;
+			left:0px
+		}
+		.peelbackhotspot-button-image {
+			max-width: none !important;
+			position:absolute;
+			z-index: 1;
+		}
+		.peelbackhotspot-button-vertical {
+			transform: rotate(90deg);
+		}
+
+		
+
+		.peelbackhotspot-infobox {
+			display:none;
+			position:absolute;
+			background-color: grey;
+			color:white;
+			border-radius: 5px;
+			padding: 5px;
+			line-height: 1;
+			max-width: 50%;
+			opactiy: 0.9;
+			.peelbackhotspot-infobox-title {
+				font-size: .9em;
+				font-weight: bold;
+			}
+			.peelbackhotspot-infobox-body {
+				font-size: .8em;
+			}
 		}
 	}
 

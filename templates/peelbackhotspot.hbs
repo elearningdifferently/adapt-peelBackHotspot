@@ -1,24 +1,30 @@
-<div class="peelbackhotspot-inner component-inner">
+<div class="peelbackhotspot-inner component-inner {{#if _reveal._isInfoBoxAriaOnly}}aria-only{{/if}}" role="region" aria-label="{{_accessibility._ariaRegions.peelBackHotspot}}">
     {{> component this}}
-    <div class="peelbackhotspot-imageboard">
-    	<img class="peelbackhotspot-foreground" src="{{ _reveal._foreground }}">
-        <div id="peelbackhotspot-track">
-            <button class="peelbackhotspot-button">{{ _reveal._button.textLeft }}</button>
-        </div>
-    	<div class="peelbackhotspot-overlaycontainer">
-    		<div class="peelbackhotspot-hider">
-    			<img class="peelbackhotspot-background" src="{{ _reveal._background }}">
-                {{#if _items}}
-                <div class="peelbackhotspot-hotspots">
-                {{#each _items}}
-                    <a href="#" tabindex="-1" class="peelbackhotspot-hotspot {{#if _isVisited}}visited{{/if}}" data-id="{{@index}}" style="top:{{{_top}}}%; left:{{{_left}}}%;" role="button" aria-label="{{pinAlt}}">
-                    <div class="icon icon-pin"></div>
-                    </a>
-                {{/each}}
-                </div>
+    <div class="peelbackhitspot-widget component-widget">
+        <div class="peelbackhotspot-imageboard">
+        	<img class="peelbackhotspot-foreground" src="{{ _reveal._foreground }}">
+            <div id="peelbackhotspot-track">
+                {{#if _reveal._button._img }}
+                <img class="peelbackhotspot-button-image" src="{{ _reveal._button._img }}">
+                <a role="button" href="#" tabindex="0" aria-label="Click me to reveal text" class="peelbackhotspot-button"></a>
+                {{else}}
+                <button class="peelbackhotspot-button {{#if _reveal._button._isVertical}}peelbackhotspot-button-vertical{{/if}}">{{ _reveal._button.textLeft }}</button>
                 {{/if}}
-    		</div>
-    	</div>
-    	
+            </div>
+        	<div class="peelbackhotspot-overlaycontainer">
+        		<div class="peelbackhotspot-hider">
+        			<img class="peelbackhotspot-background" src="{{ _reveal._background }}">
+                    {{#if _items}}
+                    <div class="peelbackhotspot-hotspots">
+                    {{#each _items}}
+                        <a role="button" href="#" tabindex="-1" class="peelbackhotspot-hotspot {{#if _isVisited}}visited{{/if}}" data-id="{{@index}}" style="top:{{{_top}}}%; left:{{{_left}}}%;" role="button" aria-label="{{pinAlt}}"><div class="icon icon-pin"></div></a>
+                        <div class="peelbackhotspot-infobox" id="item-{{@index}}" data-id="{{@index}}"></div>
+                    {{/each}}
+                    </div>
+                    {{/if}}
+        		</div>
+        	</div>
+        	
+        </div>
     </div>
 </div>
