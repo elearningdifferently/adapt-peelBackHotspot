@@ -1,17 +1,17 @@
 {
-  "name": "adapt-peelBackHotspot",
-  "version": "0.0.0",
-  "homepage": "https://github.com/cgkineo/adapt-peelBackHotspot",
-  "authors": [
-    "Oliver Foster <oliver.foster@kineo.com>"
-  ],
-  "description": "Peel-back to peelBackHotspot (left to right)",
-  "main": "/js/adapt-peelBackHotspot.js",
-  "displayName" : "peelBackHotspot Component",
-  "component" : "peelBackHotspot",
-  "keywords": [
-    "adapt-plugin",
-    "adapt-component"
-  ],
-  "license": "GPLv3"
+    "name": "adapt-peelBackHotspot",
+    "repository": "git://github.com/cgkineo/adapt-peelBackHotspot",
+    "framework": "^2.0.0",
+    "version": "2.0.0",
+    "homepage": "https://github.com/cgkineo/adapt-peelBackHotspot",
+    "issues": "https://github.com/cgkineo/adapt-peelBackHotspot/issues/",
+    "displayName": "Peel-back Hotspot",
+    "component": "peelBackHotspot",
+    "description": "Peel-back to reveal (left to right)",
+    "main": "/js/adapt-peelBackHotspot.js",
+    "keywords": [
+        "adapt-plugin",
+        "adapt-component"
+    ],
+    "license": "GPLv3"
 }
