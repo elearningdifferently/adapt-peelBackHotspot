@@ -1,0 +1,261 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "$ref": "http://localhost/plugins/content/component/model.schema",
+  "globals": {
+    "ariaRegion": {
+      "type": "string",
+      "required": true,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "translatable": true
+    }
+  },
+  "properties": {
+    "instruction": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the instruction text",
+      "translatable": true
+    },
+    "mobileTitle": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "Title that is displayed for the mobile verison of the component.",
+      "translatable": true
+    },
+    "mobileBody": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "TextArea",
+      "validators": [],
+      "help": "Body that is displayed for the mobile verison of the component.","translatable": true
+    },
+    "_isAccordianOnMobile": {
+      "type": "boolean",
+      "required": true,
+      "default": false,
+      "title": "Replace with Accordion on mobile",
+      "inputType": "Checkbox",
+      "validators": [],
+      "help": "If set to true, the component is replaced with an Accordion on mobile."
+    },
+    "_reveal": {
+      "type": "object",
+      "required": true,
+      "title": "Reveal",
+      "properties": {
+        "_isInfoBoxAriaOnly": {
+          "type": "boolean",
+          "required": true,
+          "default": false,
+          "title": "Is infobox Aria only",
+          "inputType": "Checkbox",
+          "validators": [],
+          "help": ""
+        },
+        "_background": {
+          "type": "string",
+          "required": false,
+          "default": "",
+          "title": "Background image",
+          "inputType": "Asset:image",
+          "validators": ["required"],
+          "help": ""
+        },
+        "_foreground": {
+          "type": "string",
+          "required": false,
+          "default": "",
+          "title": "Foreground image",
+          "inputType": "Asset:image",
+          "validators": ["required"],
+          "help": ""
+        },
+        "_button": {
+          "type": "object",
+          "required": true,
+          "title": "Button",
+          "properties": {
+            "textLeft": {
+              "type": "string",
+              "required": false,
+              "default": "",
+              "inputType": "Text",
+              "validators": [],
+              "help": "Text slide left",
+              "translatable": true
+            },
+            "textRight": {
+              "type": "string",
+              "required": false,
+              "default": "",
+              "inputType": "Text",
+              "validators": [],
+              "help": "Text slide right",
+              "translatable": true
+            },
+            "_img": {
+              "type": "string",
+              "required": false,
+              "default": "",
+              "title": "Image ",
+              "inputType": "Asset:image",
+              "validators": [],
+              "help": "Image "
+            }
+          }
+        },
+        "_maxHeight": {
+          "type": "object",
+          "required": true,
+          "title": "max height",
+          "properties": {
+            "small": {
+              "type": "string",
+              "required": false,
+              "default": "400px",
+              "inputType": "Text",
+              "validators": [],
+              "help": "",
+              "translatable": true
+            },
+            "medium": {
+              "type": "string",
+              "required": false,
+              "default": "400px",
+              "inputType": "Text",
+              "validators": [],
+              "help": "",
+              "translatable": true
+            },
+            "large": {
+              "type": "string",
+              "required": false,
+              "default": "600px",
+              "inputType": "Text",
+              "validators": [],
+              "help": "",
+              "translatable": true
+            }
+          }
+        },
+        "_infoboxPaddingPixels": {
+          "type": "object",
+          "required": true,
+          "title": "infobox padding",
+          "properties": {
+            "top": {
+              "type": "number",
+              "required": false,
+              "default": "10",
+              "inputType": "Number",
+              "validators": ["number"],
+              "help": ""
+            },
+            "left": {
+              "type": "number",
+              "required": false,
+              "default": "10",
+              "inputType": "Number",
+              "validators": ["number"],
+              "help": ""
+            }
+          }
+        }
+      }
+    },
+    "_items": {
+      "type": "array",
+      "required": true,
+      "title": "Items",
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "_top": {
+            "title": "Top",
+            "type": "number",
+            "required": true,
+            "inputType": "Number",
+            "validators": ["number"],
+            "help": "Top position of the hotspot."
+          },
+          "_left": {
+            "title": "Left",
+            "type": "number",
+            "required": true,
+            "inputType": "Number",
+            "validators": ["number"],
+            "help": "Left position of the hotspot."
+          },
+          "pinAlt": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "inputType": "Text",
+            "validators": [],
+            "help": "Aria label for the hotspot.",
+            "translatable": true
+          },
+          "title": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "inputType": "Text",
+            "validators": [],
+            "help": "",
+            "translatable": true
+          },
+          "body": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "inputType": "TextArea",
+            "validators": [],
+            "help": "",
+            "translatable": true
+          },
+          "_isInfoBoxShown": {
+            "type": "boolean",
+            "required": true,
+            "default": false,
+            "title": "Is infobox visibile",
+            "inputType": "Checkbox",
+            "validators": [],
+            "help": ""
+          },
+          "_infoType": {
+            "type": "string",
+            "required": false,
+            "title": "Hotspot type",
+            "default": "infobox",
+            "inputType": {
+              "type": "Select",
+              "options": ["infobox", "notify"]
+            },
+            "help": ""
+          },
+          "alt": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "inputType": "Text",
+            "validators": [],
+            "help": "The alternative text for this item",
+            "translatable": true
+          }
+        }
+      }
+    }
+  }
+}
