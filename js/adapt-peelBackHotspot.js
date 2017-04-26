@@ -59,46 +59,48 @@ define(function(require) {
         },
 
         replaceWithAccordion: function() {
-          var Accordion = require('components/adapt-contrib-accordion/js/adapt-contrib-accordion');
-          var model = this.prepareAccordionModel();
-          model.set('_component', 'accordion');
-          this.newAccordion = new Accordion({model:model, $parent: this.options.$parent});
-          this.newAccordion.preRender();
-          this.newAccordion.postRender();
-          model.set('_component', 'peelbackhotspot');
-          this.options.$parent.html("");
-          this.options.$parent.append(this.newAccordion.$el);
-          this.stopListening(Adapt, 'device:resize');
-          Adapt.trigger('device:resize');
-          this.undelegateEvents();
-          this.listenTo(Adapt, "device:resize", this.onResize);
-
+            var Accordion = require('components/adapt-contrib-accordion/js/adapt-contrib-accordion');
+            var model = this.prepareAccordionModel();
+            model.set('_component', 'accordion');
+            this.newAccordion = new Accordion({model:model});
+            this.newAccordion.preRender();
+            this.newAccordion.postRender();
+            model.set('_component', 'peelbackhotspot');
+            var $container = $(".component-container", $("." + this.model.get("_parentId")));
+            $container.empty();
+            $container.append(this.newAccordion.$el);
+            this.stopListening(Adapt, 'device:resize');
+            Adapt.trigger('device:resize');
+            this.undelegateEvents();
+            this.listenTo(Adapt, "device:resize", this.onResize);
         },
 
         prepareAccordionModel: function() {
-          var model = this.model;
-          if (model.get('_wasPeelBackHotspot')) return model;
-          model.set('_wasPeelBackHotspot', true);
-          model.set('originalBody', model.get('body'));
-          model.set('originalTitle', model.get('displayTitle'));
-          if (model.get('mobileBody')) {
+            var model = this.model;
+            if (model.get('_wasPeelBackHotspot')) return model;
+            model.set('_wasPeelBackHotspot', true);
+            model.set('originalBody', model.get('body'));
+            model.set('originalTitle', model.get('displayTitle'));
+            if (model.get('mobileBody')) {
             model.set('body', model.get('mobileBody'));
-          }
-          if (model.get('mobileTitle')) {
+            }
+            if (model.get('mobileTitle')) {
             model.set('displayTitle', model.get('mobileTitle'));
-          }
-          return model;
+            }
+            return model;
         },
 
         replaceWithPeelBackHotspot: function() {
-          this.newAccordion.remove();
-          this.preparePeelBackHotspotModel();
-          this.render();
-          this.options.$parent.append(this.$el);
-          this.stopListening(Adapt, 'device:resize');
-          Adapt.trigger('device:resize');
-          this.listenTo(Adapt, "device:resize", this.onResize);
-          this.delegateEvents();
+            this.newAccordion.remove();
+            this.preparePeelBackHotspotModel();
+            this.render();
+            var $container = $(".component-container", $("." + this.model.get("_parentId")));
+            $container.empty();
+            $container.append(this.$el);
+            this.stopListening(Adapt, 'device:resize');
+            Adapt.trigger('device:resize');
+            this.listenTo(Adapt, "device:resize", this.onResize);
+            this.delegateEvents();
         },
 
         preparePeelBackHotspotModel: function() {
@@ -473,10 +475,10 @@ define(function(require) {
     Adapt.register("peelbackhotspot", peelbackhotspot );
 
     if ($.fn.focusNoScroll === undefined) $.fn.focusNoScroll = function(){
-      var y = $(window).scrollTop();
-      this[0].focus();
-      window.scrollTo(null, y);
-      return this; //chainability
+        var y = $(window).scrollTop();
+        this[0].focus();
+        window.scrollTo(null, y);
+        return this; //chainability
     };
 
     
