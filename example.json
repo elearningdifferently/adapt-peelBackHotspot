@@ -16,7 +16,7 @@
     },
     "_isAccordianOnMobile": true,
     "_reveal": {
-        "_isInfoBoxAriaOnly": true,
+        "_isInfoBoxAriaOnly": false,
         "_background": "assets/male-naked.png",
         "_foreground": "assets/male-clothed.png",
         "_button": {
@@ -36,8 +36,8 @@
     },
     "_items": [
         {
-            "_top": "5",
-            "_left": "45",
+            "_top": 5,
+            "_left": 45,
             "pinAlt": "Head",
             "title": "Head",
             "body": "Some text about your head",
@@ -46,8 +46,8 @@
             "alt": "Head"
         },
         {
-            "_top": "23",
-            "_left": "55",
+            "_top": 23,
+            "_left": 55,
             "pinAlt": "Heart",
             "title": "Heart",
             "body": "Some text about your heart",
@@ -56,8 +56,8 @@
             "alt": "Heart"
         },
         {
-            "_top": "45",
-            "_left": "25",
+            "_top": 45,
+            "_left": 25,
             "pinAlt": "Hand",
             "title": "Hand",
             "body": "Some text about your hand",
