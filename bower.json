@@ -2,11 +2,11 @@
     "name": "adapt-peelBackHotspot",
     "repository": "git://github.com/cgkineo/adapt-peelBackHotspot",
     "framework": "^2.0.0",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "homepage": "https://github.com/cgkineo/adapt-peelBackHotspot",
     "issues": "https://github.com/cgkineo/adapt-peelBackHotspot/issues/",
     "displayName": "Peel-back Hotspot",
-    "component": "peelBackHotspot",
+    "component": "peelbackhotspot",
     "description": "Peel-back to reveal (left to right)",
     "main": "/js/adapt-peelBackHotspot.js",
     "keywords": [
